@@ -16,6 +16,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{% static 'base/plugins/font-awesome-5.11.1/css/all.min.css'%}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{% static 'base/css/adminlte.min.css'%}">
+
+  {% block extra-css %} {% endblock %}
 </head>
 <body class="hold-transition layout-top-nav">
 <div class="wrapper">
@@ -47,9 +49,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{% static 'base/plugins/jquery/jquery.min.js'%}"></script>
 <!-- Bootstrap 4 -->
 <script src="{% static 'base/plugins/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+
+
+
 <!-- AdminLTE App -->
 <script src="{% static 'base/js/adminlte.min.js'%}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{% static 'base/js/demo.js'%}"></script>
+{% block extra-js%} {% endblock %}
+
+{% block datatable %}{% endblock %}
+
+{% block javascript %}{% endblock %}
+
+
+
 </body>
 </html>
